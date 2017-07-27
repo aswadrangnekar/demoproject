@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'tests/unit_tests.sh'
+                sh './tests/unit_tests.sh'
             }
         }
         stage('Deploy') {

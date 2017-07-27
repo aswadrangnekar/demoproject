@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 echo "Running UTCs ..."
 echo "Success!"
+
+# exit 1
