@@ -1,6 +1,12 @@
 pipeline {
     agent any
 
+    // Global environment vars
+    environment {
+        COMMIT_ID = 'XXX'
+    }
+
+    // Pipeline stages
     stages {
         stage('Build') {
             steps {
@@ -20,10 +26,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                ansiblePlaybook(playbook: 'deploy.yml', colorized: true)
             }
         }
     }
 
+    // TODO: post Jenkins job
     post {
         always {
             echo 'clean up workspace'
