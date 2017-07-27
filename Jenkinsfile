@@ -20,13 +20,13 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'tests/unit_tests.sh'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                ansiblePlaybook(playbook: 'deploy.yml', colorized: true)
+                ansiblePlaybook(playbook: 'deploy/deploy.yml', colorized: true)
             }
         }
     }

@@ -3,5 +3,5 @@
   tasks:
    - name: Update demo website
      copy:
-        src: index.html
+        src: ../index.html
         dest: /usr/share/nginx/html/index.html

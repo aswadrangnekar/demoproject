@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-echo "Sucesses!"
+echo "Running UTCs ..."
+echo "Success!"
